@@ -216,6 +216,188 @@ const BUILT_IN_PRODUCT_TEMPLATES = {
     }
 };
 
+// 默认用量（针对典型单份产出），用于在加载模板时自动填充材料用量
+const DEFAULT_MATERIAL_QUANTITIES = {
+    "寿司": {
+        "寿司米": 120,
+        "海苔": 1,
+        "寿司醋": 15,
+        "三文鱼": 40,
+        "金枪鱼": 35,
+        "鳗鱼": 30,
+        "虾仁": 25,
+        "蟹棒": 1,
+        "飞鱼籽": 10,
+        "黄瓜": 20,
+        "牛油果": 30,
+        "芥末": 5,
+        "酱油": 10,
+        "姜片": 5,
+        "芝麻": 3
+    },
+    "蛋糕": {
+        "低筋面粉": 80,
+        "鸡蛋": 1,
+        "白砂糖": 40,
+        "黄油": 30,
+        "牛奶": 60,
+        "鲜奶油": 50,
+        "泡打粉": 3,
+        "香草精": 2,
+        "巧克力": 20,
+        "可可粉": 10,
+        "果酱": 15,
+        "芝士": 25,
+        "水果": 30
+    },
+    "面包": {
+        "高筋面粉": 100,
+        "酵母": 2,
+        "白砂糖": 8,
+        "盐": 2,
+        "黄油": 15,
+        "牛奶": 60,
+        "鸡蛋": 0.5,
+        "橄榄油": 5,
+        "蜂蜜": 10,
+        "芝麻": 5,
+        "坚果": 8
+    },
+    "披萨": {
+        "高筋面粉": 120,
+        "酵母": 2,
+        "番茄酱": 50,
+        "马苏里拉芝士": 80,
+        "橄榄油": 10,
+        "盐": 2,
+        "白砂糖": 4,
+        "培根": 30,
+        "火腿": 25,
+        "牛肉": 30,
+        "虾仁": 20,
+        "洋葱": 20,
+        "青椒": 15,
+        "番茄": 20,
+        "蘑菇": 20,
+        "黑橄榄": 10,
+        "罗勒叶": 2
+    },
+    "汉堡": {
+        "汉堡面包": 1,
+        "牛肉饼": 1,
+        "芝士片": 1,
+        "生菜": 1,
+        "番茄": 2,
+        "洋葱": 15,
+        "酸黄瓜": 2,
+        "培根": 1,
+        "鸡蛋": 1,
+        "番茄酱": 15,
+        "沙拉酱": 15,
+        "芥末酱": 10
+    },
+    "沙拉": {
+        "生菜": 60,
+        "紫甘蓝": 20,
+        "番茄": 40,
+        "黄瓜": 30,
+        "胡萝卜": 20,
+        "玉米粒": 30,
+        "鸡胸肉": 50,
+        "虾仁": 30,
+        "鸡蛋": 0.5,
+        "牛油果": 30,
+        "芝士碎": 15,
+        "坚果": 10,
+        "沙拉酱": 30,
+        "橄榄油": 10,
+        "柠檬汁": 5,
+        "盐": 1,
+        "黑胡椒": 1
+    },
+    "三明治": {
+        "吐司面包": 2,
+        "火腿": 2,
+        "培根": 1,
+        "鸡胸肉": 40,
+        "芝士片": 1,
+        "鸡蛋": 0.5,
+        "生菜": 2,
+        "番茄": 2,
+        "黄瓜": 2,
+        "洋葱": 10,
+        "黄油": 5,
+        "沙拉酱": 15,
+        "芥末酱": 10
+    },
+    "炒饭": {
+        "米饭": 200,
+        "鸡蛋": 1,
+        "火腿": 30,
+        "虾仁": 25,
+        "青豆": 20,
+        "玉米粒": 20,
+        "胡萝卜": 15,
+        "葱花": 5,
+        "蒜末": 3,
+        "酱油": 10,
+        "盐": 1.5,
+        "食用油": 15
+    },
+    "面条": {
+        "挂面": 120,
+        "猪肉": 40,
+        "牛肉": 40,
+        "鸡蛋": 0.5,
+        "青菜": 30,
+        "葱花": 5,
+        "姜丝": 3,
+        "蒜末": 3,
+        "酱油": 10,
+        "醋": 5,
+        "盐": 1.5,
+        "香油": 5,
+        "辣椒油": 5
+    },
+    "咖啡": {
+        "咖啡豆": 18,
+        "牛奶": 150,
+        "白砂糖": 5,
+        "糖浆": 10,
+        "鲜奶油": 15,
+        "巧克力酱": 10,
+        "焦糖酱": 10,
+        "香草糖浆": 10,
+        "肉桂粉": 1
+    },
+    "奶茶": {
+        "红茶": 5,
+        "绿茶": 5,
+        "牛奶": 120,
+        "植脂末": 20,
+        "白砂糖": 15,
+        "珍珠": 50,
+        "椰果": 40,
+        "布丁": 40,
+        "果酱": 20,
+        "鲜奶油": 30,
+        "冰块": 150
+    },
+    "果汁": {
+        "橙子": 150,
+        "苹果": 120,
+        "西瓜": 150,
+        "芒果": 100,
+        "草莓": 80,
+        "蓝莓": 40,
+        "柠檬": 20,
+        "白砂糖": 10,
+        "蜂蜜": 15,
+        "冰块": 100,
+        "薄荷叶": 5
+    }
+};
+
 // 主应用逻辑
 class App {
     constructor() {
@@ -263,7 +445,7 @@ class App {
                     throw new Error(`HTTP ${response.status}`);
                 }
                 const data = await response.json();
-                this.productTemplates = data.templates || fallbackTemplates;
+                this.productTemplates = this.applyDefaultQuantities(data.templates || fallbackTemplates);
                 if (this.productTemplates && Object.keys(this.productTemplates).length > 0) {
                     if (path !== candidatePaths[0]) {
                         console.warn(`使用备用路径加载产品模板: ${path}`);
@@ -275,7 +457,7 @@ class App {
             }
         }
 
-        this.productTemplates = fallbackTemplates;
+        this.productTemplates = this.applyDefaultQuantities(fallbackTemplates);
         this.showToast('使用内置模板数据，未找到外部模板文件', 'warning');
     }
 
@@ -458,45 +640,29 @@ class App {
             ? this.productTemplates[this.currentFoodType].materials 
             : [];
 
-        // 创建材料选择下拉菜单
-        let materialOptions = '<option value="">请选择材料...</option>';
+        // 创建 datalist 供用户选择或手动输入
+        let materialOptions = '';
         if (availableMaterials.length > 0) {
-            // 按类别分组
-            const categories = {};
-            availableMaterials.forEach(m => {
-                if (!categories[m.category]) {
-                    categories[m.category] = [];
-                }
-                categories[m.category].push(m);
-            });
-
-            // 生成分组选项
-            Object.keys(categories).forEach(category => {
-                materialOptions += `<optgroup label="${category}">`;
-                categories[category].forEach(m => {
-                    const selected = material && m.name === material.name ? 'selected' : '';
-                    materialOptions += `<option value="${m.name}" ${selected} data-unit="${m.unit}" data-price="${m.defaultPrice}" data-category="${m.category}">${m.name}</option>`;
-                });
-                materialOptions += `</optgroup>`;
-            });
+            materialOptions = availableMaterials.map(m => `<option value="${m.name}"></option>`).join('');
         }
+
+        const dataListId = availableMaterials.length > 0 
+            ? `material-options-${Date.now()}-${Math.floor(Math.random() * 10000)}`
+            : '';
 
         const materialName = material?.name || '';
         const materialUnit = material?.unit || (isTemplate ? material?.unit : '克');
         const materialPrice = material?.unitPrice !== undefined ? material.unitPrice : (isTemplate && material?.defaultPrice !== undefined ? material.defaultPrice : '');
-        const materialQuantity = material?.quantity || '';
+        const materialQuantity = (material?.quantity !== undefined && material?.quantity !== null)
+            ? material.quantity
+            : (material?.defaultQuantity ?? '');
         const materialWastage = material?.wastageRate || 0;
         
         row.innerHTML = `
             <div class="input-group">
                 <label>材料名称</label>
-                ${availableMaterials.length > 0 ? `
-                    <select class="material-select" onchange="app.onMaterialSelect(this)">
-                        ${materialOptions}
-                    </select>
-                ` : `
-                    <input type="text" class="material-name" value="${materialName}" placeholder="例如：三文鱼">
-                `}
+                <input type="text" class="material-name" value="${materialName}" placeholder="例如：三文鱼" ${dataListId ? `list="${dataListId}"` : ''}>
+                ${dataListId ? `<datalist id="${dataListId}">${materialOptions}</datalist>` : ''}
             </div>
             <div class="input-group">
                 <label>单位</label>
@@ -518,20 +684,41 @@ class App {
         `;
         
         materialsList.appendChild(row);
+
+        row.dataset.availableMaterials = JSON.stringify(availableMaterials);
+
+        const materialNameInput = row.querySelector('.material-name');
+        if (materialNameInput) {
+            const handler = () => this.onMaterialInput(materialNameInput);
+            materialNameInput.addEventListener('change', handler);
+            materialNameInput.addEventListener('blur', handler);
+        }
     }
 
-    // 材料选择事件处理
-    onMaterialSelect(selectElement) {
-        const row = selectElement.closest('.material-row');
-        const selectedOption = selectElement.options[selectElement.selectedIndex];
-        
-        if (selectedOption.value) {
-            const unit = selectedOption.dataset.unit;
-            const price = selectedOption.dataset.price;
-            
-            // 填充单位和默认单价
-            row.querySelector('.material-unit').value = unit || '克';
-            row.querySelector('.material-price').value = price || '';
+    // 材料输入事件处理
+    onMaterialInput(inputElement) {
+        const row = inputElement.closest('.material-row');
+        if (!row) return;
+
+        const name = inputElement.value.trim();
+        if (!name) return;
+
+        let availableMaterials = [];
+        try {
+            availableMaterials = JSON.parse(row.dataset.availableMaterials || '[]');
+        } catch (error) {
+            availableMaterials = [];
+        }
+
+        const matched = availableMaterials.find(m => m.name === name);
+        if (matched) {
+            row.querySelector('.material-unit').value = matched.unit || '克';
+            if (matched.defaultPrice !== undefined) {
+                row.querySelector('.material-price').value = matched.defaultPrice;
+            }
+            if (matched.defaultQuantity !== undefined) {
+                row.querySelector('.material-quantity').value = matched.defaultQuantity;
+            }
         }
     }
 
@@ -563,10 +750,16 @@ class App {
         // 收集材料
         const materials = [];
         document.querySelectorAll('.material-row').forEach(row => {
-            // 尝试获取下拉选择的材料名称，如果不存在则使用输入框
-            const selectElement = row.querySelector('.material-select');
             const inputElement = row.querySelector('.material-name');
-            const name = selectElement ? selectElement.options[selectElement.selectedIndex].value : (inputElement ? inputElement.value.trim() : '');
+            let name = inputElement ? inputElement.value.trim() : '';
+
+            // 兼容旧版本的下拉选择
+            if (!name) {
+                const selectElement = row.querySelector('.material-select');
+                if (selectElement) {
+                    name = selectElement.options[selectElement.selectedIndex].value;
+                }
+            }
             
             const unit = row.querySelector('.material-unit').value.trim();
             const unitPrice = parseFloat(row.querySelector('.material-price').value) || 0;
@@ -1005,6 +1198,25 @@ class App {
         };
 
         reportGenerator.generatePDFReport(reportHtml, titles[reportType]);
+    }
+
+    // 应用默认用量，确保每个材料都带有 defaultQuantity 字段
+    applyDefaultQuantities(templates = {}) {
+        const clone = JSON.parse(JSON.stringify(templates || {}));
+        Object.keys(clone).forEach(foodType => {
+            const quantityMap = DEFAULT_MATERIAL_QUANTITIES[foodType] || {};
+            clone[foodType].materials = clone[foodType].materials.map(material => ({
+                ...material,
+                defaultQuantity: material.defaultQuantity !== undefined
+                    ? material.defaultQuantity
+                    : (quantityMap[material.name] ?? '')
+            }));
+        });
+        return clone;
+    }
+
+    getDefaultQuantity(foodType, materialName) {
+        return DEFAULT_MATERIAL_QUANTITIES[foodType]?.[materialName] ?? '';
     }
 
     // 获取内置模板副本，避免直接修改常量
