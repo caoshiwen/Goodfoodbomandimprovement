@@ -1,0 +1,544 @@
+{
+  "说明": "这是材料替代品数据库，用于优化建议功能",
+  "version": "2.0",
+  "materials": {
+    "寿司米": [
+      {
+        "name": "普通大米",
+        "costRatio": 0.6,
+        "qualityImpact": -0.2,
+        "description": "普通大米便宜40%，但粘性和口感不如专用寿司米"
+      },
+      {
+        "name": "珍珠米",
+        "costRatio": 0.8,
+        "qualityImpact": -0.1,
+        "description": "珍珠米粘性较好，可作为替代品"
+      }
+    ],
+    "海苔": [
+      {
+        "name": "二级海苔",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "二级海苔质量略低，但价格便宜30%"
+      },
+      {
+        "name": "碎海苔",
+        "costRatio": 0.5,
+        "qualityImpact": -0.25,
+        "description": "碎海苔适合装饰用，成本低50%"
+      }
+    ],
+    "寿司醋": [
+      {
+        "name": "自制寿司醋",
+        "costRatio": 0.6,
+        "qualityImpact": -0.05,
+        "description": "使用米醋、糖、盐自制，成本降低40%"
+      },
+      {
+        "name": "白醋调味",
+        "costRatio": 0.4,
+        "qualityImpact": -0.2,
+        "description": "白醋加糖调味，经济实惠但风味略差"
+      }
+    ],
+    "芥末": [
+      {
+        "name": "芥末粉",
+        "costRatio": 0.5,
+        "qualityImpact": -0.1,
+        "description": "芥末粉冲调使用，成本便宜50%"
+      },
+      {
+        "name": "辣根酱",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "辣根酱风味相似，价格较低"
+      }
+    ],
+    "三文鱼": [
+      {
+        "name": "冰鲜三文鱼",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "冰鲜三文鱼比新鲜三文鱼便宜30%，口感略有下降"
+      },
+      {
+        "name": "金枪鱼",
+        "costRatio": 0.9,
+        "qualityImpact": -0.05,
+        "description": "金枪鱼价格相近，可作为替代品"
+      },
+      {
+        "name": "鲷鱼",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "鲷鱼价格较低，但口感差异较大"
+      }
+    ],
+    "金枪鱼": [
+      {
+        "name": "冰鲜金枪鱼",
+        "costRatio": 0.75,
+        "qualityImpact": -0.1,
+        "description": "冰鲜金枪鱼性价比更高"
+      },
+      {
+        "name": "罐头金枪鱼",
+        "costRatio": 0.4,
+        "qualityImpact": -0.3,
+        "description": "罐头金枪鱼便宜60%，但适合卷寿司"
+      }
+    ],
+    "鳗鱼": [
+      {
+        "name": "冷冻烤鳗鱼",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "冷冻烤鳗鱼便于保存，价格便宜30%"
+      },
+      {
+        "name": "鲶鱼",
+        "costRatio": 0.5,
+        "qualityImpact": -0.25,
+        "description": "鲶鱼口感相似，成本低50%"
+      }
+    ],
+    "蟹棒": [
+      {
+        "name": "普通蟹棒",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "普通蟹棒性价比高"
+      },
+      {
+        "name": "鱼糜制品",
+        "costRatio": 0.5,
+        "qualityImpact": -0.2,
+        "description": "鱼糜制品成本更低"
+      }
+    ],
+    "飞鱼籽": [
+      {
+        "name": "柳叶鱼籽",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "柳叶鱼籽价格便宜40%，口感相似"
+      },
+      {
+        "name": "芝麻",
+        "costRatio": 0.3,
+        "qualityImpact": -0.3,
+        "description": "芝麻可作装饰替代，成本低70%"
+      }
+    ],
+    "黄瓜": [
+      {
+        "name": "小黄瓜",
+        "costRatio": 0.8,
+        "qualityImpact": -0.05,
+        "description": "小黄瓜更嫩脆，价格略低"
+      },
+      {
+        "name": "青瓜",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "青瓜水分足，便宜30%"
+      }
+    ],
+    "牛油果": [
+      {
+        "name": "冷冻牛油果",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "冷冻牛油果便于使用，价格便宜30%"
+      },
+      {
+        "name": "黄瓜",
+        "costRatio": 0.4,
+        "qualityImpact": -0.3,
+        "description": "黄瓜口感清爽，可作经济替代"
+      }
+    ],
+    "酱油": [
+      {
+        "name": "生抽",
+        "costRatio": 0.8,
+        "qualityImpact": -0.1,
+        "description": "生抽颜色浅，可作替代"
+      },
+      {
+        "name": "普通酱油",
+        "costRatio": 0.6,
+        "qualityImpact": -0.2,
+        "description": "普通酱油经济实惠"
+      }
+    ],
+    "姜片": [
+      {
+        "name": "姜粉",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "姜粉便于存储，价格便宜30%"
+      },
+      {
+        "name": "嫩姜",
+        "costRatio": 0.85,
+        "qualityImpact": -0.05,
+        "description": "嫩姜口感更嫩，价格适中"
+      }
+    ],
+    "高筋面粉": [
+      {
+        "name": "中筋面粉",
+        "costRatio": 0.8,
+        "qualityImpact": -0.15,
+        "description": "中筋面粉适用性广，价格便宜20%"
+      },
+      {
+        "name": "面包专用粉",
+        "costRatio": 1.1,
+        "qualityImpact": 0.1,
+        "description": "面包专用粉品质更好，筋度更高"
+      }
+    ],
+    "面粉": [
+      {
+        "name": "中筋面粉",
+        "costRatio": 0.8,
+        "qualityImpact": -0.05,
+        "description": "中筋面粉适用性广，价格适中"
+      },
+      {
+        "name": "低筋面粉",
+        "costRatio": 0.9,
+        "qualityImpact": 0,
+        "description": "低筋面粉适合蛋糕制作"
+      }
+    ],
+    "酵母": [
+      {
+        "name": "干酵母",
+        "costRatio": 0.7,
+        "qualityImpact": -0.05,
+        "description": "干酵母便于保存，价格便宜30%"
+      },
+      {
+        "name": "小苏打",
+        "costRatio": 0.4,
+        "qualityImpact": -0.25,
+        "description": "小苏打可作快速发酵替代，但风味略差"
+      }
+    ],
+    "黄油": [
+      {
+        "name": "人造黄油",
+        "costRatio": 0.5,
+        "qualityImpact": -0.2,
+        "description": "人造黄油成本低50%，但口感和营养价值较低"
+      },
+      {
+        "name": "植物黄油",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "植物黄油较为经济，适合大批量生产"
+      }
+    ],
+    "牛奶": [
+      {
+        "name": "奶粉冲调",
+        "costRatio": 0.6,
+        "qualityImpact": -0.1,
+        "description": "奶粉冲调经济实惠，适合烘焙"
+      },
+      {
+        "name": "豆奶",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "豆奶植物蛋白，适合特殊需求"
+      }
+    ],
+    "鲜奶油": [
+      {
+        "name": "植脂奶油",
+        "costRatio": 0.6,
+        "qualityImpact": -0.2,
+        "description": "植脂奶油便宜40%，但口感和营养不如动物奶油"
+      },
+      {
+        "name": "淡奶油",
+        "costRatio": 0.85,
+        "qualityImpact": -0.1,
+        "description": "淡奶油脂肪含量较低，价格略低"
+      }
+    ],
+    "白砂糖": [
+      {
+        "name": "绵白糖",
+        "costRatio": 0.95,
+        "qualityImpact": 0,
+        "description": "绵白糖溶解性好，价格相近"
+      },
+      {
+        "name": "红糖",
+        "costRatio": 0.9,
+        "qualityImpact": -0.05,
+        "description": "红糖有特殊风味，适合某些产品"
+      }
+    ],
+    "盐": [
+      {
+        "name": "粗盐",
+        "costRatio": 0.5,
+        "qualityImpact": -0.05,
+        "description": "粗盐更经济，需研磨使用"
+      },
+      {
+        "name": "海盐",
+        "costRatio": 1.2,
+        "qualityImpact": 0.05,
+        "description": "海盐矿物质丰富，品质更好"
+      }
+    ],
+    "巧克力": [
+      {
+        "name": "代可可脂巧克力",
+        "costRatio": 0.5,
+        "qualityImpact": -0.25,
+        "description": "代可可脂巧克力成本低，但品质明显下降"
+      },
+      {
+        "name": "黑巧克力",
+        "costRatio": 1.1,
+        "qualityImpact": 0.1,
+        "description": "黑巧克力品质更好，可可含量高"
+      }
+    ],
+    "芝士": [
+      {
+        "name": "奶油芝士",
+        "costRatio": 0.9,
+        "qualityImpact": -0.05,
+        "description": "奶油芝士口感细腻，价格适中"
+      },
+      {
+        "name": "马苏里拉芝士",
+        "costRatio": 0.85,
+        "qualityImpact": -0.1,
+        "description": "马苏里拉芝士拉丝效果好"
+      }
+    ],
+    "果酱": [
+      {
+        "name": "自制果酱",
+        "costRatio": 0.6,
+        "qualityImpact": -0.05,
+        "description": "自制果酱新鲜健康，成本低40%"
+      },
+      {
+        "name": "糖浆",
+        "costRatio": 0.4,
+        "qualityImpact": -0.25,
+        "description": "糖浆经济实惠，但风味单一"
+      }
+    ],
+    "坚果": [
+      {
+        "name": "碎坚果",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "碎坚果便于使用，价格便宜30%"
+      },
+      {
+        "name": "葵花籽",
+        "costRatio": 0.4,
+        "qualityImpact": -0.2,
+        "description": "葵花籽经济实惠，可作替代"
+      }
+    ],
+    "牛肉": [
+      {
+        "name": "碎牛肉",
+        "costRatio": 0.7,
+        "qualityImpact": -0.15,
+        "description": "碎牛肉适合汉堡等产品，成本较低"
+      },
+      {
+        "name": "鸡肉",
+        "costRatio": 0.4,
+        "qualityImpact": -0.3,
+        "description": "鸡肉价格便宜，但口感差异大"
+      }
+    ],
+    "虾仁": [
+      {
+        "name": "冷冻虾仁",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "冷冻虾仁性价比高"
+      },
+      {
+        "name": "小虾仁",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "小虾仁更经济实惠"
+      }
+    ],
+    "鸡蛋": [
+      {
+        "name": "普通鸡蛋",
+        "costRatio": 0.8,
+        "qualityImpact": 0,
+        "description": "普通鸡蛋性价比高"
+      },
+      {
+        "name": "鸭蛋",
+        "costRatio": 0.9,
+        "qualityImpact": -0.05,
+        "description": "鸭蛋可作为替代品"
+      }
+    ],
+    "培根": [
+      {
+        "name": "火腿",
+        "costRatio": 0.8,
+        "qualityImpact": -0.1,
+        "description": "火腿口感相似，价格略低"
+      },
+      {
+        "name": "肉松",
+        "costRatio": 0.6,
+        "qualityImpact": -0.2,
+        "description": "肉松口味独特，成本更低"
+      }
+    ],
+    "生菜": [
+      {
+        "name": "卷心菜",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "卷心菜更经济，口感略脆"
+      },
+      {
+        "name": "油麦菜",
+        "costRatio": 0.8,
+        "qualityImpact": -0.05,
+        "description": "油麦菜口感鲜嫩，价格适中"
+      }
+    ],
+    "番茄": [
+      {
+        "name": "番茄酱",
+        "costRatio": 0.5,
+        "qualityImpact": -0.2,
+        "description": "番茄酱成本低，但口感不如新鲜番茄"
+      },
+      {
+        "name": "小番茄",
+        "costRatio": 0.7,
+        "qualityImpact": -0.05,
+        "description": "小番茄风味浓郁，价格略低"
+      }
+    ],
+    "洋葱": [
+      {
+        "name": "洋葱粉",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "洋葱粉便于保存，价格便宜40%"
+      },
+      {
+        "name": "大葱",
+        "costRatio": 0.5,
+        "qualityImpact": -0.2,
+        "description": "大葱风味相似，成本更低"
+      }
+    ],
+    "胡萝卜": [
+      {
+        "name": "冷冻胡萝卜丁",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "冷冻胡萝卜丁便于使用，价格便宜30%"
+      },
+      {
+        "name": "胡萝卜粉",
+        "costRatio": 0.5,
+        "qualityImpact": -0.2,
+        "description": "胡萝卜粉适合调色用途"
+      }
+    ],
+    "香草精": [
+      {
+        "name": "香草粉",
+        "costRatio": 0.6,
+        "qualityImpact": -0.1,
+        "description": "香草粉便于保存，价格便宜40%"
+      },
+      {
+        "name": "香草糖",
+        "costRatio": 0.8,
+        "qualityImpact": -0.05,
+        "description": "香草糖方便使用，价格适中"
+      }
+    ],
+    "泡打粉": [
+      {
+        "name": "小苏打",
+        "costRatio": 0.5,
+        "qualityImpact": -0.15,
+        "description": "小苏打搭配酸性材料可替代，成本低50%"
+      },
+      {
+        "name": "酵母",
+        "costRatio": 0.7,
+        "qualityImpact": -0.1,
+        "description": "酵母可作发酵替代，但需要时间"
+      }
+    ],
+    "蜂蜜": [
+      {
+        "name": "糖浆",
+        "costRatio": 0.4,
+        "qualityImpact": -0.2,
+        "description": "糖浆经济实惠，但风味不如蜂蜜"
+      },
+      {
+        "name": "麦芽糖",
+        "costRatio": 0.6,
+        "qualityImpact": -0.15,
+        "description": "麦芽糖口感柔和，价格便宜40%"
+      }
+    ],
+    "橄榄油": [
+      {
+        "name": "葵花籽油",
+        "costRatio": 0.5,
+        "qualityImpact": -0.15,
+        "description": "葵花籽油健康实惠，适合烘焙"
+      },
+      {
+        "name": "玉米油",
+        "costRatio": 0.6,
+        "qualityImpact": -0.1,
+        "description": "玉米油价格适中，口感清淡"
+      }
+    ],
+    "芝麻": [
+      {
+        "name": "黑芝麻",
+        "costRatio": 0.9,
+        "qualityImpact": 0,
+        "description": "黑芝麻营养价值相似，价格相近"
+      },
+      {
+        "name": "芝麻酱",
+        "costRatio": 1.2,
+        "qualityImpact": 0.1,
+        "description": "芝麻酱香味浓郁，便于使用"
+      }
+    ]
+  }
+}

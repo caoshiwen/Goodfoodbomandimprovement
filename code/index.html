@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食品成本计算与优化工具</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍱 食品成本计算与优化工具</h1>
+            <p class="subtitle">专业的食品成本分析与优化解决方案</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="input">数据输入</button>
+            <button class="tab-btn" data-tab="calculate">成本计算</button>
+            <button class="tab-btn" data-tab="optimize">优化分析</button>
+            <button class="tab-btn" data-tab="report">报告生成</button>
+        </nav>
+
+        <!-- 数据输入面板 -->
+        <div id="input-panel" class="panel active">
+            <div class="panel-header">
+                <h2>📝 数据输入</h2>
+                <div class="input-mode-switch">
+                    <button class="mode-btn active" data-mode="manual">手动输入</button>
+                    <button class="mode-btn" data-mode="import">导入Excel</button>
+                </div>
+            </div>
+
+            <!-- 手动输入模式 -->
+            <div id="manual-input" class="input-mode active">
+                <div class="form-group">
+                    <label>食物类型：</label>
+                    <select id="foodType">
+                        <option value="寿司">寿司</option>
+                        <option value="蛋糕">蛋糕</option>
+                        <option value="面包">面包</option>
+                        <option value="披萨">披萨</option>
+                        <option value="汉堡">汉堡</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>配方名称：</label>
+                    <input type="text" id="recipeName" placeholder="例如：三文鱼寿司">
+                </div>
+
+                <div class="form-group">
+                    <label>产出数量：</label>
+                    <input type="number" id="yield" value="1" min="1">
+                    <span class="unit">份</span>
+                </div>
+
+                <div class="form-group">
+                    <label>人工成本：</label>
+                    <input type="number" id="laborCost" value="0" step="0.1" min="0">
+                    <span class="unit">元/份</span>
+                </div>
+
+                <div class="materials-section">
+                    <h3>材料清单</h3>
+                    <div id="materialsList">
+                        <!-- 材料行将动态添加 -->
+                    </div>
+                    <button class="btn-secondary" id="addMaterial">+ 添加材料</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" id="saveRecipe">保存配方</button>
+                    <button class="btn-secondary" id="clearForm">清空</button>
+                </div>
+            </div>
+
+            <!-- Excel导入模式 -->
+            <div id="import-input" class="input-mode">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p>拖放Excel文件到此处，或点击选择文件</p>
+                    <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" style="display:none">
+                    <button class="btn-secondary" id="selectFile">选择文件</button>
+                </div>
+                <div class="template-download">
+                    <p>💡 提示：首次使用？</p>
+                    <button class="btn-link" id="downloadTemplate">下载Excel模板</button>
+                </div>
+                <div id="importPreview" class="import-preview" style="display:none;">
+                    <h3>导入预览</h3>
+                    <div id="previewContent"></div>
+                    <button class="btn-primary" id="confirmImport">确认导入</button>
+                </div>
+            </div>
+
+            <!-- 已保存配方列表 -->
+            <div class="saved-recipes" id="savedRecipes">
+                <h3>已保存配方</h3>
+                <div id="recipesList"></div>
+            </div>
+        </div>
+
+        <!-- 成本计算面板 -->
+        <div id="calculate-panel" class="panel">
+            <div class="panel-header">
+                <h2>💰 成本计算</h2>
+            </div>
+
+            <div class="recipe-selector">
+                <label>选择配方：</label>
+                <select id="calculateRecipeSelect">
+                    <option value="">请选择配方</option>
+                </select>
+                <button class="btn-primary" id="calculateBtn">计算成本</button>
+            </div>
+
+            <div id="calculationResult" class="result-container" style="display:none;">
+                <div class="result-summary">
+                    <div class="cost-card">
+                        <h4>材料成本</h4>
+                        <div class="cost-value" id="materialCost">-</div>
+                    </div>
+                    <div class="cost-card">
+                        <h4>人工成本</h4>
+                        <div class="cost-value" id="laborCostDisplay">-</div>
+                    </div>
+                    <div class="cost-card primary">
+                        <h4>总成本</h4>
+                        <div class="cost-value" id="totalCost">-</div>
+                    </div>
+                    <div class="cost-card">
+                        <h4>单份成本</h4>
+                        <div class="cost-value" id="unitCost">-</div>
+                    </div>
+                </div>
+
+                <div class="cost-breakdown">
+                    <h3>成本明细</h3>
+                    <canvas id="costChart"></canvas>
+                </div>
+
+                <div class="material-details">
+                    <h3>材料详情</h3>
+                    <table id="materialTable">
+                        <thead>
+                            <tr>
+                                <th>材料名称</th>
+                                <th>用量</th>
+                                <th>单价</th>
+                                <th>损耗率</th>
+                                <th>小计</th>
+                                <th>占比</th>
+                            </tr>
+                        </thead>
+                        <tbody id="materialTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 优化分析面板 -->
+        <div id="optimize-panel" class="panel">
+            <div class="panel-header">
+                <h2>🎯 优化分析</h2>
+            </div>
+
+            <div class="recipe-selector">
+                <label>选择配方：</label>
+                <select id="optimizeRecipeSelect">
+                    <option value="">请选择配方</option>
+                </select>
+                <button class="btn-primary" id="optimizeBtn">生成优化方案</button>
+            </div>
+
+            <div id="optimizationResult" class="result-container" style="display:none;">
+                <div class="optimization-summary">
+                    <h3>优化潜力分析</h3>
+                    <div class="optimization-stats">
+                        <div class="stat-card">
+                            <div class="stat-label">当前成本</div>
+                            <div class="stat-value" id="currentCostOpt">-</div>
+                        </div>
+                        <div class="stat-card success">
+                            <div class="stat-label">最佳优化成本</div>
+                            <div class="stat-value" id="optimizedCost">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">节省金额</div>
+                            <div class="stat-value" id="savedAmount">-</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">节省比例</div>
+                            <div class="stat-value" id="savedPercent">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions-container">
+                    <h3>优化建议</h3>
+                    <div id="suggestionsList"></div>
+                </div>
+
+                <div class="comparison-chart">
+                    <h3>成本对比</h3>
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 报告生成面板 -->
+        <div id="report-panel" class="panel">
+            <div class="panel-header">
+                <h2>📊 报告生成</h2>
+            </div>
+
+            <div class="report-options">
+                <div class="form-group">
+                    <label>报告类型：</label>
+                    <select id="reportType">
+                        <option value="summary">成本汇总报告</option>
+                        <option value="detailed">详细分析报告</option>
+                        <option value="optimization">优化建议报告</option>
+                        <option value="comparison">配方对比报告</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>包含配方：</label>
+                    <div id="reportRecipeSelection"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" id="generateReport">生成报告</button>
+                    <button class="btn-secondary" id="exportExcel">导出Excel</button>
+                    <button class="btn-secondary" id="exportPDF">导出PDF</button>
+                </div>
+            </div>
+
+            <div id="reportPreview" class="report-preview" style="display:none;">
+                <h3>报告预览</h3>
+                <div id="reportContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 食品成本计算工具 | 数据保存在本地浏览器，隐私安全</p>
+    </footer>
+
+    <!-- JavaScript模块 -->
+    <script src="js/calculator.js"></script>
+    <script src="js/optimizer.js"></script>
+    <script src="js/fileHandler.js"></script>
+    <script src="js/reportGenerator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

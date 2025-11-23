@@ -1,0 +1,220 @@
+{
+  "说明": "产品配方模板数据库，包含各类食品的默认材料列表",
+  "version": "1.0",
+  "templates": {
+    "寿司": {
+      "name": "寿司",
+      "materials": [
+        { "name": "寿司米", "unit": "克", "defaultPrice": 0.008, "category": "主料" },
+        { "name": "海苔", "unit": "张", "defaultPrice": 0.5, "category": "主料" },
+        { "name": "寿司醋", "unit": "毫升", "defaultPrice": 0.02, "category": "调料" },
+        { "name": "三文鱼", "unit": "克", "defaultPrice": 0.08, "category": "配料" },
+        { "name": "金枪鱼", "unit": "克", "defaultPrice": 0.06, "category": "配料" },
+        { "name": "鳗鱼", "unit": "克", "defaultPrice": 0.12, "category": "配料" },
+        { "name": "虾仁", "unit": "克", "defaultPrice": 0.05, "category": "配料" },
+        { "name": "蟹棒", "unit": "根", "defaultPrice": 0.8, "category": "配料" },
+        { "name": "飞鱼籽", "unit": "克", "defaultPrice": 0.15, "category": "配料" },
+        { "name": "黄瓜", "unit": "克", "defaultPrice": 0.006, "category": "蔬菜" },
+        { "name": "牛油果", "unit": "克", "defaultPrice": 0.03, "category": "蔬菜" },
+        { "name": "芥末", "unit": "克", "defaultPrice": 0.2, "category": "调料" },
+        { "name": "酱油", "unit": "毫升", "defaultPrice": 0.01, "category": "调料" },
+        { "name": "姜片", "unit": "克", "defaultPrice": 0.02, "category": "调料" },
+        { "name": "芝麻", "unit": "克", "defaultPrice": 0.03, "category": "装饰" }
+      ]
+    },
+    "面包": {
+      "name": "面包",
+      "materials": [
+        { "name": "高筋面粉", "unit": "克", "defaultPrice": 0.008, "category": "主料" },
+        { "name": "酵母", "unit": "克", "defaultPrice": 0.06, "category": "主料" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "主料" },
+        { "name": "盐", "unit": "克", "defaultPrice": 0.003, "category": "调料" },
+        { "name": "黄油", "unit": "克", "defaultPrice": 0.04, "category": "油脂类" },
+        { "name": "牛奶", "unit": "毫升", "defaultPrice": 0.012, "category": "液体" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "橄榄油", "unit": "毫升", "defaultPrice": 0.03, "category": "油脂类" },
+        { "name": "蜂蜜", "unit": "克", "defaultPrice": 0.05, "category": "调料" },
+        { "name": "芝麻", "unit": "克", "defaultPrice": 0.03, "category": "装饰" },
+        { "name": "坚果", "unit": "克", "defaultPrice": 0.06, "category": "配料" }
+      ]
+    },
+    "蛋糕": {
+      "name": "蛋糕",
+      "materials": [
+        { "name": "低筋面粉", "unit": "克", "defaultPrice": 0.01, "category": "主料" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "主料" },
+        { "name": "黄油", "unit": "克", "defaultPrice": 0.04, "category": "油脂类" },
+        { "name": "牛奶", "unit": "毫升", "defaultPrice": 0.012, "category": "液体" },
+        { "name": "鲜奶油", "unit": "克", "defaultPrice": 0.03, "category": "奶制品" },
+        { "name": "泡打粉", "unit": "克", "defaultPrice": 0.08, "category": "辅料" },
+        { "name": "香草精", "unit": "毫升", "defaultPrice": 0.5, "category": "调料" },
+        { "name": "巧克力", "unit": "克", "defaultPrice": 0.05, "category": "配料" },
+        { "name": "可可粉", "unit": "克", "defaultPrice": 0.08, "category": "配料" },
+        { "name": "果酱", "unit": "克", "defaultPrice": 0.02, "category": "配料" },
+        { "name": "芝士", "unit": "克", "defaultPrice": 0.045, "category": "奶制品" },
+        { "name": "水果", "unit": "克", "defaultPrice": 0.015, "category": "装饰" }
+      ]
+    },
+    "披萨": {
+      "name": "披萨",
+      "materials": [
+        { "name": "高筋面粉", "unit": "克", "defaultPrice": 0.008, "category": "主料" },
+        { "name": "酵母", "unit": "克", "defaultPrice": 0.06, "category": "主料" },
+        { "name": "番茄酱", "unit": "克", "defaultPrice": 0.015, "category": "酱料" },
+        { "name": "马苏里拉芝士", "unit": "克", "defaultPrice": 0.045, "category": "奶制品" },
+        { "name": "橄榄油", "unit": "毫升", "defaultPrice": 0.03, "category": "油脂类" },
+        { "name": "盐", "unit": "克", "defaultPrice": 0.003, "category": "调料" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "调料" },
+        { "name": "培根", "unit": "克", "defaultPrice": 0.04, "category": "肉类" },
+        { "name": "火腿", "unit": "克", "defaultPrice": 0.035, "category": "肉类" },
+        { "name": "牛肉", "unit": "克", "defaultPrice": 0.05, "category": "肉类" },
+        { "name": "虾仁", "unit": "克", "defaultPrice": 0.05, "category": "海鲜" },
+        { "name": "洋葱", "unit": "克", "defaultPrice": 0.004, "category": "蔬菜" },
+        { "name": "青椒", "unit": "克", "defaultPrice": 0.008, "category": "蔬菜" },
+        { "name": "番茄", "unit": "克", "defaultPrice": 0.006, "category": "蔬菜" },
+        { "name": "蘑菇", "unit": "克", "defaultPrice": 0.02, "category": "蔬菜" },
+        { "name": "黑橄榄", "unit": "克", "defaultPrice": 0.06, "category": "配料" },
+        { "name": "罗勒叶", "unit": "克", "defaultPrice": 0.15, "category": "调料" }
+      ]
+    },
+    "汉堡": {
+      "name": "汉堡",
+      "materials": [
+        { "name": "汉堡面包", "unit": "个", "defaultPrice": 1.5, "category": "主料" },
+        { "name": "牛肉饼", "unit": "片", "defaultPrice": 3.5, "category": "肉类" },
+        { "name": "芝士片", "unit": "片", "defaultPrice": 0.8, "category": "奶制品" },
+        { "name": "生菜", "unit": "片", "defaultPrice": 0.2, "category": "蔬菜" },
+        { "name": "番茄", "unit": "片", "defaultPrice": 0.3, "category": "蔬菜" },
+        { "name": "洋葱", "unit": "克", "defaultPrice": 0.004, "category": "蔬菜" },
+        { "name": "酸黄瓜", "unit": "片", "defaultPrice": 0.3, "category": "配料" },
+        { "name": "培根", "unit": "片", "defaultPrice": 1.2, "category": "肉类" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "番茄酱", "unit": "克", "defaultPrice": 0.015, "category": "酱料" },
+        { "name": "沙拉酱", "unit": "克", "defaultPrice": 0.02, "category": "酱料" },
+        { "name": "芥末酱", "unit": "克", "defaultPrice": 0.025, "category": "酱料" }
+      ]
+    },
+    "沙拉": {
+      "name": "沙拉",
+      "materials": [
+        { "name": "生菜", "unit": "克", "defaultPrice": 0.008, "category": "蔬菜" },
+        { "name": "紫甘蓝", "unit": "克", "defaultPrice": 0.006, "category": "蔬菜" },
+        { "name": "番茄", "unit": "克", "defaultPrice": 0.006, "category": "蔬菜" },
+        { "name": "黄瓜", "unit": "克", "defaultPrice": 0.006, "category": "蔬菜" },
+        { "name": "胡萝卜", "unit": "克", "defaultPrice": 0.004, "category": "蔬菜" },
+        { "name": "玉米粒", "unit": "克", "defaultPrice": 0.01, "category": "蔬菜" },
+        { "name": "鸡胸肉", "unit": "克", "defaultPrice": 0.025, "category": "肉类" },
+        { "name": "虾仁", "unit": "克", "defaultPrice": 0.05, "category": "海鲜" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "牛油果", "unit": "克", "defaultPrice": 0.03, "category": "水果" },
+        { "name": "芝士碎", "unit": "克", "defaultPrice": 0.045, "category": "奶制品" },
+        { "name": "坚果", "unit": "克", "defaultPrice": 0.06, "category": "配料" },
+        { "name": "沙拉酱", "unit": "克", "defaultPrice": 0.02, "category": "酱料" },
+        { "name": "橄榄油", "unit": "毫升", "defaultPrice": 0.03, "category": "油脂类" },
+        { "name": "柠檬汁", "unit": "毫升", "defaultPrice": 0.05, "category": "调料" },
+        { "name": "盐", "unit": "克", "defaultPrice": 0.003, "category": "调料" },
+        { "name": "黑胡椒", "unit": "克", "defaultPrice": 0.08, "category": "调料" }
+      ]
+    },
+    "三明治": {
+      "name": "三明治",
+      "materials": [
+        { "name": "吐司面包", "unit": "片", "defaultPrice": 0.8, "category": "主料" },
+        { "name": "火腿", "unit": "片", "defaultPrice": 1.5, "category": "肉类" },
+        { "name": "培根", "unit": "片", "defaultPrice": 1.2, "category": "肉类" },
+        { "name": "鸡胸肉", "unit": "克", "defaultPrice": 0.025, "category": "肉类" },
+        { "name": "芝士片", "unit": "片", "defaultPrice": 0.8, "category": "奶制品" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "生菜", "unit": "片", "defaultPrice": 0.2, "category": "蔬菜" },
+        { "name": "番茄", "unit": "片", "defaultPrice": 0.3, "category": "蔬菜" },
+        { "name": "黄瓜", "unit": "片", "defaultPrice": 0.2, "category": "蔬菜" },
+        { "name": "洋葱", "unit": "克", "defaultPrice": 0.004, "category": "蔬菜" },
+        { "name": "黄油", "unit": "克", "defaultPrice": 0.04, "category": "油脂类" },
+        { "name": "沙拉酱", "unit": "克", "defaultPrice": 0.02, "category": "酱料" },
+        { "name": "芥末酱", "unit": "克", "defaultPrice": 0.025, "category": "酱料" }
+      ]
+    },
+    "炒饭": {
+      "name": "炒饭",
+      "materials": [
+        { "name": "米饭", "unit": "克", "defaultPrice": 0.006, "category": "主料" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "火腿", "unit": "克", "defaultPrice": 0.035, "category": "肉类" },
+        { "name": "虾仁", "unit": "克", "defaultPrice": 0.05, "category": "海鲜" },
+        { "name": "青豆", "unit": "克", "defaultPrice": 0.008, "category": "蔬菜" },
+        { "name": "玉米粒", "unit": "克", "defaultPrice": 0.01, "category": "蔬菜" },
+        { "name": "胡萝卜", "unit": "克", "defaultPrice": 0.004, "category": "蔬菜" },
+        { "name": "葱花", "unit": "克", "defaultPrice": 0.01, "category": "调料" },
+        { "name": "蒜末", "unit": "克", "defaultPrice": 0.015, "category": "调料" },
+        { "name": "酱油", "unit": "毫升", "defaultPrice": 0.01, "category": "调料" },
+        { "name": "盐", "unit": "克", "defaultPrice": 0.003, "category": "调料" },
+        { "name": "食用油", "unit": "毫升", "defaultPrice": 0.012, "category": "油脂类" }
+      ]
+    },
+    "面条": {
+      "name": "面条",
+      "materials": [
+        { "name": "挂面", "unit": "克", "defaultPrice": 0.008, "category": "主料" },
+        { "name": "猪肉", "unit": "克", "defaultPrice": 0.03, "category": "肉类" },
+        { "name": "牛肉", "unit": "克", "defaultPrice": 0.05, "category": "肉类" },
+        { "name": "鸡蛋", "unit": "个", "defaultPrice": 1.2, "category": "蛋品" },
+        { "name": "青菜", "unit": "克", "defaultPrice": 0.005, "category": "蔬菜" },
+        { "name": "葱花", "unit": "克", "defaultPrice": 0.01, "category": "调料" },
+        { "name": "姜丝", "unit": "克", "defaultPrice": 0.02, "category": "调料" },
+        { "name": "蒜末", "unit": "克", "defaultPrice": 0.015, "category": "调料" },
+        { "name": "酱油", "unit": "毫升", "defaultPrice": 0.01, "category": "调料" },
+        { "name": "醋", "unit": "毫升", "defaultPrice": 0.008, "category": "调料" },
+        { "name": "盐", "unit": "克", "defaultPrice": 0.003, "category": "调料" },
+        { "name": "香油", "unit": "毫升", "defaultPrice": 0.06, "category": "油脂类" },
+        { "name": "辣椒油", "unit": "毫升", "defaultPrice": 0.03, "category": "调料" }
+      ]
+    },
+    "咖啡": {
+      "name": "咖啡",
+      "materials": [
+        { "name": "咖啡豆", "unit": "克", "defaultPrice": 0.12, "category": "主料" },
+        { "name": "牛奶", "unit": "毫升", "defaultPrice": 0.012, "category": "液体" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "调料" },
+        { "name": "糖浆", "unit": "毫升", "defaultPrice": 0.04, "category": "调料" },
+        { "name": "鲜奶油", "unit": "克", "defaultPrice": 0.03, "category": "奶制品" },
+        { "name": "巧克力酱", "unit": "克", "defaultPrice": 0.05, "category": "配料" },
+        { "name": "焦糖酱", "unit": "克", "defaultPrice": 0.045, "category": "配料" },
+        { "name": "香草糖浆", "unit": "毫升", "defaultPrice": 0.06, "category": "调料" },
+        { "name": "肉桂粉", "unit": "克", "defaultPrice": 0.15, "category": "调料" }
+      ]
+    },
+    "奶茶": {
+      "name": "奶茶",
+      "materials": [
+        { "name": "红茶", "unit": "克", "defaultPrice": 0.08, "category": "主料" },
+        { "name": "绿茶", "unit": "克", "defaultPrice": 0.1, "category": "主料" },
+        { "name": "牛奶", "unit": "毫升", "defaultPrice": 0.012, "category": "液体" },
+        { "name": "植脂末", "unit": "克", "defaultPrice": 0.02, "category": "配料" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "调料" },
+        { "name": "珍珠", "unit": "克", "defaultPrice": 0.015, "category": "配料" },
+        { "name": "椰果", "unit": "克", "defaultPrice": 0.012, "category": "配料" },
+        { "name": "布丁", "unit": "克", "defaultPrice": 0.025, "category": "配料" },
+        { "name": "果酱", "unit": "克", "defaultPrice": 0.02, "category": "配料" },
+        { "name": "鲜奶油", "unit": "克", "defaultPrice": 0.03, "category": "奶制品" },
+        { "name": "冰块", "unit": "克", "defaultPrice": 0.001, "category": "辅料" }
+      ]
+    },
+    "果汁": {
+      "name": "果汁",
+      "materials": [
+        { "name": "橙子", "unit": "克", "defaultPrice": 0.008, "category": "水果" },
+        { "name": "苹果", "unit": "克", "defaultPrice": 0.007, "category": "水果" },
+        { "name": "西瓜", "unit": "克", "defaultPrice": 0.004, "category": "水果" },
+        { "name": "芒果", "unit": "克", "defaultPrice": 0.012, "category": "水果" },
+        { "name": "草莓", "unit": "克", "defaultPrice": 0.02, "category": "水果" },
+        { "name": "蓝莓", "unit": "克", "defaultPrice": 0.06, "category": "水果" },
+        { "name": "柠檬", "unit": "克", "defaultPrice": 0.01, "category": "水果" },
+        { "name": "白砂糖", "unit": "克", "defaultPrice": 0.006, "category": "调料" },
+        { "name": "蜂蜜", "unit": "克", "defaultPrice": 0.05, "category": "调料" },
+        { "name": "冰块", "unit": "克", "defaultPrice": 0.001, "category": "辅料" },
+        { "name": "薄荷叶", "unit": "克", "defaultPrice": 0.1, "category": "装饰" }
+      ]
+    }
+  }
+}
